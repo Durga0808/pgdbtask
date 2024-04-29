@@ -8,11 +8,23 @@ const PORT = 5000;
 
 //PostgreSQL configuration
 const pool = new Pool({
-  user: "dp", //username of db
-  host: "localhost", //host address
-  database: "dpdatabase", //database name
-  password: "dp143sss", //user password
-  port: 5432, //port number for postgresql
+  // user: "dp", //username of db
+  // host: "localhost", //host address
+  // database: "dpdatabase", //database name
+  // password: "dp143sss", //user password
+  // port: 5432, //port number for postgresql
+  //postgres://dp:pPVhCWGQ74210PaSgPLuntDaaPlftTKU@dpg-con2ls0cmk4c739tl1sg-a.oregon-postgres.render.com/dpdatabase
+
+  connectionString: 'postgres://dp:pPVhCWGQ74210PaSgPLuntDaaPlftTKU@dpg-con2ls0cmk4c739tl1sg-a.oregon-postgres.render.com/dpdatabase',
+  ssl: {
+    rejectUnauthorized: false // You may need to set this to true in production
+  }
+
+  // user: "dp", //username of db
+  // host: "dpg-con2ls0cmk4c739tl1sg-a.oregon-postgres.render.com", //host address
+  // database: "dpdatabase", //database name
+  // password: "pPVhCWGQ74210PaSgPLuntDaaPlftTKU", //user password
+  // port: 5432, //port number for postgresql
 });
 
 //creating api endponit
