@@ -13,7 +13,8 @@ export const DataGrid = () => {
     const fetchData = async () => {
       try {
         const startTime = performance.now(); // Start measuring time
-        const response = await axios.get("http://localhost:5000/data"); //making api call to get data
+       // const response = await axios.get("http://localhost:5000/data"); //making api call to get data
+        const response = await axios.get("https://pgdbtask-backend.onrender.com/data"); //making api call to get data
         const fetchedData = response.data;
         // setData(fetchedData); //assigning data to data variable
         // // Extract keys from the first data item
